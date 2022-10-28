@@ -9,6 +9,7 @@ private:
 	double Im;
 
 public:
+	int m_pswd_f_f = 0;
 	Complex(double r = 0, double i = 0);
 	~Complex();
 	void setRe(double r);
@@ -159,6 +160,7 @@ istream& operator>> (istream &in, Complex &c)
 
 int main(int argc, char const *argv[])
 { 	
+	cout<<"Welcome to calcularot complex chisel"<<endl;
 	Complex a;
 	Complex b;
 
@@ -183,7 +185,7 @@ int main(int argc, char const *argv[])
     cout<<"Privet, try to ugadat' what pswd ya want from you!(pswd sostoit iz numbers)"<<endl;
     cout<<"Mojesh try to vvesti kakoi to pswd(ne more then 10 simvolov): ";
 
-    scanf("%s",&str);
+    scanf("%s",str);
     
 
     cout<<"Ti vvel: ";
@@ -196,7 +198,7 @@ int main(int argc, char const *argv[])
     cout<<"."<<endl;
     cout<<"Vozmojno this will pomoch' you: https://inlnk.ru/oe65Rw";
 
-    GALF pswd;
+    Complex pswd;
     pswd.m_pswd_f_f = atoi(str);
     cout<<endl;
     pswd.check_pswd();
